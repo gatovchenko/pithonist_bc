@@ -2,18 +2,16 @@
 def conversly(x):
     start_number, finish_number = '', ''
     stop = 0
-    res = ''
     for i in x:
         if i != '.' and stop == 0:
             start_number = i + start_number
-            start_numb = int(start_number)
-        elif i== '.':
+        elif i == '.':
             stop += 1
         else:
             finish_number = i + finish_number
-            finish_numb = int(finish_number)
+    finish = start_number + '.' + finish_number
+    return float(finish)
 
-    return float((start_numb + finish_numb / 100))
 
 first_num = input('Input your first number: ')
 second_num = input('Input your first number: ')
